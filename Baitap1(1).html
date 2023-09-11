@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="text">This is a text</p>
+    <form action="rikkei.com" method="get">
+        <input id="ipt1" type="button" value="Hide text">
+        <input id="ipt2" type="button" value="Show text">
+    </form>
+    <script>
+        let doc1 = document.getElementById("ipt1")
+        let doc2 = document.getElementById("ipt2")
+        let text1 = document.getElementById("text")
+
+        doc1.addEventListener("click", function () {
+            text1.style.display = "none"
+        })
+        doc2.addEventListener("click", function () {
+            text1.style.display = "block"
+        })
+    </script>
+</body>
+
+</html>

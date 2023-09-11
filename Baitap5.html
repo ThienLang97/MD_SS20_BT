@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input1" type="text">
+    <div id="input2"></div>
+
+    <script>
+        let input1 = document.getElementById("input1");
+        let input2 = document.getElementById("input2");
+
+        input1.addEventListener("input", function () {
+            let giaTriInput1 = input1.value;
+            // 
+            input2.innerHTML = giaTriInput1;
+            // 
+            input2.textContent = giaTriInput1;
+            // 
+            input2.innerHTML = '';
+            let text = document.createTextNode(giaTriInput1);
+            input2.appendChild(text);
+        });
+    </script>
+</body>
+</html>

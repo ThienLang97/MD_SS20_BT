@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhập vào đây</p> 
+    <input class="input1" type="text"> <br>
+    <input class="input2" type="text"> <br>
+    <p>Tổng</p> <br>
+    <input class="output" type="text">
+  <script>
+    let input1 = document.querySelector(".input1");
+    let input2 = document.querySelector(".input2");
+    let output = document.querySelector(".output");
+    function total() {
+        let value1 = +input1.value;
+        let value2 = +input2.value;
+        let total = value1 + value2;
+        output.value=total
+        // return total
+    }
+    input1.addEventListener("input", total);
+    input2.addEventListener("input", total);
+
+  </script>
+
+</body>
+</html>

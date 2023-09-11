@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="input" type="text">
+    <div id="output"></div>
+
+    <script>
+        let input = document.getElementById("input");
+        let output = document.getElementById("output");
+
+        input.addEventListener("input", function () {
+            let inputValue = input.value;
+
+            // Cách 1: Sử dụng thuộc tính innerHTML
+            output.innerHTML = inputValue;
+
+            // Cách 2: Sử dụng phương thức textContent
+            output.textContent = inputValue;
+
+            // Cách 3: Sử dụng phương thức createTextNode
+            output.innerHTML = '';
+            let textNode = document.createTextNode(inputValue);
+            output.appendChild(textNode);
+        });
+    </script>
+</body>
+
+</html>

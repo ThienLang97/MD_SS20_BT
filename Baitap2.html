@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="baitap1"></div>
+    <script>
+        let baitap = document.getElementById("baitap1");
+        let div1 = document.createElement("div");
+        div1.style.display = "inline-block";
+
+        let textElement = document.createElement("span");
+        textElement.textContent = "Nhập nội dung tìm kiếm ";
+        div1.appendChild(textElement);
+
+        let input1 = document.createElement("input");
+        input1.setAttribute("type", "text");
+        input1.setAttribute("placeholder", "Giỡn quá nhe");
+
+        let link1 = document.createElement("a");
+        link1.setAttribute("href", "#");
+        link1.textContent = "Ẩn tìm kiếm nâng cao";
+        link1.addEventListener("click", function () {
+            select1.style.display = "none";
+        });
+
+        let select1 = document.createElement("select");
+
+        let option1 = document.createElement("option");
+        option1.textContent = "Làm bài tập";
+        select1.appendChild(option1);
+
+        let option2 = document.createElement("option");
+        option2.textContent = "Chơi game";
+        select1.appendChild(option2);
+
+        let option3 = document.createElement("option");
+        option3.textContent = "Ngủ";
+        select1.appendChild(option3);
+
+        let button1 = document.createElement("button");
+        button1.textContent = "Tìm kiếm";
+
+        div1.appendChild(input1);
+        div1.appendChild(document.createTextNode(" "));
+        div1.appendChild(link1);
+        div1.appendChild(document.createElement("br"));
+        div1.appendChild(select1);
+        div1.appendChild(document.createElement("br"));
+        div1.appendChild(document.createElement("br"));
+        div1.appendChild(button1);
+        baitap.appendChild(div1);
+    </script>
+</body>
+
+</html>
